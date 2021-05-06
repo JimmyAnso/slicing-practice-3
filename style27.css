@@ -1,0 +1,511 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+/* Font Awesome */
+/* 注意~~~ 產出的ICON是文字(可以設定font-size調整大小) */
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+    width: 100%;
+}
+/* 從實體網頁上來看，針對排版較相近的"免費課程系列"、"見證奇蹟"、"網頁課程系列"這三個區域進行重構 */
+.container{
+    width: 1000px;
+    padding-top:50px;
+    margin:50px auto 0;
+    text-align: center;
+}
+.title{}
+.title h2{
+    width: 100%;
+    font-size: 40px;
+    margin-bottom: 50px;
+    display:flex;
+}
+.title h2::before, .title h2::after{
+    content:"";
+    width: 35%;
+    height: 2px;
+    background-color: #aaa;
+    display:block;
+    margin: auto;
+}
+.title h2::before{
+    background-color:red;
+}
+.title p{
+    margin-bottom:80px;
+}
+.wrap{
+    display:flex;
+    justify-content: space-between;
+}
+.item{
+    width:300px;
+    margin:auto;
+}
+.item .text{
+    box-sizing: border-box;
+    padding:15px;
+    position: relative;
+}
+.item .text h3{
+    font-size:20px;
+}
+.item .text p{
+    font-size:16px;
+}
+
+
+
+
+
+
+.header{
+    background-color: #000;
+
+}
+.header-wrap{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-logo{
+    width: 50px;
+    height: 50px;
+}
+.header-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.header-menu{
+    margin:0 50px;
+}
+.header-menu a{
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    margin:0 10px;
+    position:relative;
+    display:inline-block;
+    padding:20px 0;
+    transform: translateY(0px);
+    transition:.3s;
+}
+.header-menu a:hover{
+    transform: translateY(-10px);
+}
+.header-menu a::before{
+    content:"";
+    height: 1px;
+    background-color: #fff;
+    position:absolute;
+    bottom:5px;
+    left:50%;
+    right:50%;
+    transition:1s;
+}
+.header-menu a:hover::before{
+    left: 0;
+    right:0;
+}
+.header-search{
+    display:flex;
+}
+.header-search input{
+    border-radius: 10px 0 0 10px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+.header-search input::placeholder{
+    color:#aaa;
+}
+.header-search button{
+    font-size: 10px;
+    line-height: 10px;
+    width: 30px;
+    cursor:pointer;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    outline: none;
+}
+.header-search button:active{
+    box-shadow: inset 0 0 5px #666;
+}
+.header-search .fa-search{
+    transition:.3s;
+}
+.header-search button:hover .fa-search{
+    transform: scaleX(1.5) scaleY(1.5);
+}
+
+
+.banner{
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(123deg, #7bf 50%, transparent 50%) center left / cover,
+    url("https://picsum.photos/1200/1200/?random=1") no-repeat center right / cover;
+}
+.banner-wrap{
+    width:400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.banner-title{
+    /* width:60%; */
+    padding-bottom:10px;
+    margin-bottom: 10px;
+    position:relative;
+}
+.banner-title:after{
+    content:"";
+    width:100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+}
+.banner-title h2{
+    font-size:40px;
+    display: flex;
+    flex-direction: column;
+}
+.banner-title h2 small{
+    font-size:30px;
+}
+.banner-txt{
+    width:60%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.freeClass{}
+.freeClass-title p{
+    position: relative;
+}
+.freeClass-title p::before{
+    content:"";
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid #fc2;
+    border-left: 5px solid #fc2;
+    position: absolute;
+    top:-10px;
+    left:-10px;
+
+}
+.freeClass-title p::after{
+    content:"";
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid #fc2;
+    border-right: 5px solid #fc2;
+    position: absolute;
+    bottom:10px;
+    right:-10px;
+}
+.freeClass .item{
+    margin:0 30px;
+    border:10px solid #fcc;
+    border-radius: 20px;
+    padding:40px 10px 10px 10px;
+    position: relative;
+}
+.freeClass .item:hover .fa{
+    animation: picShake .1s linear 0s infinite alternate;
+}
+@keyframes picShake{
+    from{
+        transform: rotate(15deg);
+    }
+    to{
+        transform: rotate(-15deg);
+    }
+}
+.freeClass-pic{
+    color: #e99;
+    font-size: 50px;
+    line-height: 70px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top:-50px;
+    left:0;
+    right:0;
+    margin: auto;
+    border:10px solid transparent;
+    background-color: #fff;
+    transform:rotate(0deg);
+}
+.freeClass-pic::before{
+    content:"";
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:-10px;
+    right:0;
+    margin: auto;
+    border-top:11px solid #fc2;
+    border-right:11px solid #fc2;
+    border-bottom:11px solid transparent;
+    border-left:11px solid transparent;
+    transform:rotate(-45deg);
+}
+.freeClass-txt{
+    color:#e99;
+}
+.freeClass-txt p{
+    color:#ccc;
+}
+
+
+.toSee{}
+.toSee .item{
+    display:flex;
+    box-shadow: 0 0 30px #666;
+}
+.toSee-pic{
+    width: 50%;
+}
+.toSee-pic img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.toSee-txt{
+    width:50%;
+    text-align: left;
+}
+.toSee-txt h3{
+    margin-bottom: 10px;
+}
+.toSee-txt p{
+    margin-bottom: 30px;
+}
+.toSee-txt button{
+    position: absolute;;
+    right: 15px;
+    bottom:15px;
+    border-radius: 15px;
+    padding:0 10px 5px;
+    font-size: 16px;
+    line-height: 16px;
+    background-color: #fff;
+    color:#ccc;
+    border-color: #ccc;
+    outline:none;
+    cursor: grab;
+}
+.toSee-txt button:hover{
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 1px black;
+}
+.toSee-txt button:active{
+    cursor: grabbing;
+}
+
+
+.webClass{
+    background-color: #eee;
+    padding:0 0 80px;
+}
+.webClass .item{
+    background-color: #fff;
+    transform:translateY(0px);
+    transition:.5s;
+}
+.webClass .item:hover{
+    transform:translateY(-50px);
+    background-color: #fb7;
+}
+.webClass-pic{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.webClass-pic img{
+    width:100%;
+    vertical-align: middle;
+}
+.webClass-txt{
+    width:100%;
+}
+.webClass .item:hover .webClass-txt{
+    color:white;
+}
+.webClass-txt::before{
+    content:"";
+    border-right: 150px solid #fff;
+    border-left: 150px solid #fff;
+    border-top: 50px  solid transparent;
+    position: absolute;
+    right:0;
+    left:0;
+    top:-59px;
+    transition:.5s;
+}
+.webClass .item:hover .webClass-txt::before{
+    border-right: 150px solid #fb7;
+    border-left: 150px solid #fb7;
+}
+.webClass-txt h3{
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.webClass .item:hover .webClass-txt h3{
+    border-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    width:100%;
+}
+.footer-container{
+    background:linear-gradient(150deg, #03b89f , #0b5f97);    
+}
+.footer-wrap{
+    display:flex;
+    padding:100px 50px;
+    justify-content: space-between;
+}
+.footer-item{
+    /* 滿版 */
+    width: 0;
+    flex-grow: 1;
+
+    display:flex;
+    flex-direction: column;
+    margin:0 20px;
+}
+.footer-item h3{
+    color:white;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+    padding-bottom:10px;
+}
+.footer-item nav{}
+.footer-item nav a{
+    font-size: 16px;
+    display:block;
+    color:white;
+    text-decoration: none;
+    padding:5px 0;
+}
+.footer-item nav a:hover{
+    color:#fb7;
+}
+.footer-item form{
+    display:flex;
+    margin:auto 0;
+    /* height: 100%;
+    align-items: center; */
+    /* padding-top: 50px; */
+}
+.footer-item form input{
+    /* 滿版 */
+    width: 0;
+    flex-grow: 1;
+    outline:none;
+}
+.footer-item form button{
+    flex-shrink: 0;
+    outline:none;
+    background-color: #0b5f97;
+    color: #00ffdd;
+    border:none;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    cursor:pointer;
+    transition:.3s;
+}
+.footer-item form button:hover{
+    background-color: #fb7;
+    color: #0b5f97;
+}
+.footer-item form button:active{
+    padding:5px 20px;
+}
+.copyRight{
+    text-align: center;
+    background-color:black;
+    color:white;   
+    padding:10px 0;
+}
+
+.fa-location-arrow{
+    margin-right:20px;
+    transform:rotate(45deg) translate(0px,0px);
+
+}
+.footer-item nav a:hover .fa-location-arrow{
+    animation:train .3s ease-in-out infinite alternate;
+}
+@keyframes train{
+    from{
+        transform:rotate(45deg) translate(0px,0px);
+        
+    }
+    to{
+        transform:rotate(45deg) translate(10px,-10px);
+    }
+}
